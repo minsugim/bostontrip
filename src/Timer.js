@@ -2,7 +2,9 @@ import React, {Component} from 'react';
 import {StyleSheet, css} from 'aphrodite';
 
 const styles = StyleSheet.create({
-
+    name: {
+        fontSize: "1.5em"
+    },
     count: {
         '@media (max-width: 768px)': {
             display: 'block'
@@ -46,6 +48,7 @@ class Timer extends Component {
         let seconds = this.state.seconds === 1 ? "second" : "seconds";
         return(
             <div>
+                <div className={css(styles.name)}>UW Christian Students</div>
                 <div className={css(styles.count)}><span className={css(styles.number)}>{this.state.days}</span> <span className={css(styles.text)}> {day} </span></div>
                 <span className={css(styles.count)}><span className={css(styles.number)}>{this.state.hours}</span> <span className={css(styles.text)}> {hours} </span></span>
                 <span className={css(styles.count)}><span className={css(styles.number)}>{this.state.minutes}</span> <span className={css(styles.text)}> {minutes} </span></span> 
