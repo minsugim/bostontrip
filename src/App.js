@@ -2,8 +2,16 @@ import React, { Component } from 'react';
 import Timer from './Timer';
 import Button from 'react-bootstrap/lib/Button';
 import ButtonGroup from 'react-bootstrap/lib/ButtonGroup'
+import {StyleSheet, css} from 'aphrodite';
 import './App.css';
 
+const styles = StyleSheet.create({
+  name: {
+      fontSize: "2em",
+      color: "#4b2e83",
+      fontWeight: "bold"
+  }
+});
 
 class App extends Component {
   render() {
@@ -12,7 +20,8 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">Boston Trip Countdown!</h1>
         </header>
-        <Timer deadline="March 16, 2018"/>
+        <div className={css(styles.name)}>UW Christian Students</div>
+        <Timer deadline="16 Mar 2018 10:00:00 PDT"/>
         <div className="container">
           <ButtonGroup justified>
             <Button
@@ -31,5 +40,7 @@ class App extends Component {
     );
   }
 }
+
+
 
 export default App;
