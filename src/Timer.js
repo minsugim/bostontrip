@@ -43,16 +43,18 @@ class Timer extends Component {
     }
 
     render() {
-        let day = this.state.days === 1 ? "day" : "days";
-        let hours = this.state.hours === 1 ? "hour" : "hours";
-        let minutes = this.state.minutes === 1 ? "minute" : "minutes";
-        let seconds = this.state.seconds === 1 ? "second" : "seconds";
+        // let day = this.state.days === 1 ? "day" : "days";
+        // let hours = this.state.hours === 1 ? "hour" : "hours";
+        // let minutes = this.state.minutes === 1 ? "minute" : "minutes";
+        // let seconds = this.state.seconds === 1 ? "second" : "seconds";
         return(
             <div>
-                <div className={css(styles.count)}><span className={css(styles.number)}>{this.state.days}</span> <span className={css(styles.text)}> {day} </span></div>
-                <span className={css(styles.count)}><span className={css(styles.number)}>{this.state.hours}</span> <span className={css(styles.text)}> {hours} </span></span>
-                <span className={css(styles.count)}><span className={css(styles.number)}>{this.state.minutes}</span> <span className={css(styles.text)}> {minutes} </span></span> 
-                <span className={css(styles.count)}><span className={css(styles.number)}>{this.state.seconds}</span> <span className={css(styles.text)}> {seconds}</span></span>               
+                <div className={css(styles.count)}>
+                    <span className={css(styles.number)}>{this.state.days}</span> <span className={css(styles.text)}>days</span>
+                </div>
+                <span className={css(styles.count)}>Hours:<span className={css(styles.number)}>{((this.state.hours < 10) ? "0" : "") + this.state.hours}</span></span>
+                <span className={css(styles.count)}> Minutes:<span className={css(styles.number)}>{((this.state.minutes < 10) ? "0" : "") + this.state.minutes}</span> </span> 
+                <span className={css(styles.count)}> Seconds:<span className={css(styles.number)}>{((this.state.seconds < 10) ? "0" : "") + this.state.seconds}</span> </span>               
             </div>
         )
     }
