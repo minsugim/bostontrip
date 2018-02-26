@@ -2,11 +2,12 @@ import React, {Component} from 'react';
 import {StyleSheet, css} from 'aphrodite';
 
 const styles = StyleSheet.create({
-    number: {
-        fontSize: "4em",
-    },
-    text: {
-        fontSize: "50px"
+
+    count: {
+        '@media (max-width: 768px)': {
+            display: 'block'
+        },
+        fontSize: "4em"
     }
 });
 
@@ -45,10 +46,10 @@ class Timer extends Component {
         let seconds = this.state.seconds === 1 ? "second" : "seconds";
         return(
             <div>
-                <div className={css(styles.number)}>{this.state.days} <span className={css(styles.text)}> {day} </span></div>
-                <span className={css(styles.number)}>{this.state.hours} <span className={css(styles.text)}> {hours} </span></span>
-                <span className={css(styles.number)}>{this.state.minutes} <span className={css(styles.text)}> {minutes} </span></span> 
-                <span className={css(styles.number)}>{this.state.seconds} <span className={css(styles.text)}> {seconds}</span></span>               
+                <div className={css(styles.count)}><span className={css(styles.number)}>{this.state.days}</span> <span className={css(styles.text)}> {day} </span></div>
+                <span className={css(styles.count)}><span className={css(styles.number)}>{this.state.hours}</span> <span className={css(styles.text)}> {hours} </span></span>
+                <span className={css(styles.count)}><span className={css(styles.number)}>{this.state.minutes}</span> <span className={css(styles.text)}> {minutes} </span></span> 
+                <span className={css(styles.count)}><span className={css(styles.number)}>{this.state.seconds}</span> <span className={css(styles.text)}> {seconds}</span></span>               
             </div>
         )
     }
