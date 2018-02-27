@@ -55,7 +55,6 @@ class Timer extends Component {
                 <span className={css(styles.count)}>Hours:<span className={css(styles.number)}>{((this.state.hours < 10) ? "0" : "") + this.state.hours}</span></span>
                 <span className={css(styles.count)}> Minutes:<span className={css(styles.number)}>{((this.state.minutes < 10) ? "0" : "") + this.state.minutes}</span> </span> 
                 <span className={css(styles.count)}> Seconds:<span className={css(styles.number)}>{((this.state.seconds < 10) ? "0" : "") + this.state.seconds}</span> </span>               
-                <Line strokeWidth="3" trailWidth="3" />
             </div>
         )
     }
