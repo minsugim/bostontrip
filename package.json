@@ -7,10 +7,12 @@
     "aphrodite": "^1.2.5",
     "material-ui": "^0.20.0",
     "millisec": "^0.2.0",
+    "rc-progress": "^2.2.5",
     "react": "^16.2.0",
     "react-bootstrap": "^0.32.1",
     "react-cntdwn": "^0.3.0",
     "react-dom": "^16.2.0",
+    "react-horizontal-timeline-view": "^0.1.4",
     "react-scripts": "1.1.1",
     "react-transition-group": "^2.2.1",
     "reactstrap": "^4.8.0"

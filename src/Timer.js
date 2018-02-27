@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Line} from 'rc-progress';
 import {StyleSheet, css} from 'aphrodite';
 
 const styles = StyleSheet.create({
@@ -33,7 +34,6 @@ class Timer extends Component {
     }
 
     getTimeUntil(deadline) {
-        console.log(Date.parse(deadline));
         let time = Date.parse(deadline) - Date.parse(new Date());
         let seconds = Math.floor((time/1000) % 60);
         let minutes = Math.floor((time/1000/60) % 60);
@@ -55,6 +55,7 @@ class Timer extends Component {
                 <span className={css(styles.count)}>Hours:<span className={css(styles.number)}>{((this.state.hours < 10) ? "0" : "") + this.state.hours}</span></span>
                 <span className={css(styles.count)}> Minutes:<span className={css(styles.number)}>{((this.state.minutes < 10) ? "0" : "") + this.state.minutes}</span> </span> 
                 <span className={css(styles.count)}> Seconds:<span className={css(styles.number)}>{((this.state.seconds < 10) ? "0" : "") + this.state.seconds}</span> </span>               
+                <Line strokeWidth="3" trailWidth="3" />
             </div>
         )
     }

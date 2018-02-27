@@ -21,8 +21,8 @@ class App extends Component {
           <h1 className="App-title">Boston Trip Countdown!</h1>
         </header>
         <div className={css(styles.name)}>UW Christian Students</div>
-        <Timer deadline="16 Mar 2018 10:00:00 PDT"/>
         <div className="container">
+          <Timer deadline="16 Mar 2018 10:00:00 PDT"/>
           <ButtonGroup justified>
             <Button
                     href="https://docs.google.com/document/d/1CP6XiOyGoqh3O28YtV0Xde6eX0QkgIlhZX3Amu1vNpk/edit"
