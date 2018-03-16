@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
         '@media (max-width: 768px)': {
             display: 'block'
         },
-        fontSize: "4em"
+        fontSize: "3em"
     },
     text: {
         color: "#1e1e1e"

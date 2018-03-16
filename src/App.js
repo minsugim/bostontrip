@@ -8,9 +8,13 @@ import './App.css';
 
 const styles = StyleSheet.create({
   name: {
-      fontSize: "2em",
-      color: "#4b2e83",
-      fontWeight: "bold"
+    fontSize: "2em",
+    color: "#4b2e83",
+    fontWeight: "bold",
+    marginBottom: "1em"
+  },
+  trip: {
+    fontSize: "2em"
   }
 });
 
@@ -42,29 +46,21 @@ class App extends Component {
         </header>
         <div className={css(styles.name)}>UW Christian Students</div>
         <div className="container">
-          <Timer deadline="16 Mar 2018 10:00:00 PDT"/>
-          <div style={{height: '100px', margin: '0 auto'}}>
-               <HorizontalTimeline 
-                  values={VALUES} 
-                  indexClick={(index) => {
-                      this.setState({value: index, previous: this.state.value});
-                  }} 
-                  index={this.state.value}
-               />
-               <div className='text-center'>
-                  
-               </div>
-          </div>
+          <div className={css(styles.trip)}>Trip 1 </div>
+          <Timer deadline="16 Mar 2018 10:45:00 PDT"/>
+          <hr />
+          <div className={css(styles.trip)}>Trip 2 </div>
+          <Timer deadline="16 Mar 2018 23:59:00 PDT"/>
           <ButtonGroup justified>
             <Button
-                    href="https://docs.google.com/document/d/1CP6XiOyGoqh3O28YtV0Xde6eX0QkgIlhZX3Amu1vNpk/edit"
+                    href="https://www.dropbox.com/sh/r2wuewa6sbeu9sf/AABqyBwPpa6SlwL-F7AQwXxSa?dl=0"
                     target="_blank">
-              Song List
+              Sprink Break Recordings
             </Button>
             <Button
-                    href="https://docs.google.com/document/d/1Sulb8xef5hJA7JGjMl7GDmxN1hBlN7hcNacga-lDOCA/edit"
+                    href="/schedule.pdf"
                     target="_blank">
-              Ideas
+              Schedule
             </Button>
           </ButtonGroup>
         </div>
