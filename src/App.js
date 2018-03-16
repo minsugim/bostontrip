@@ -58,7 +58,7 @@ class App extends Component {
               Sprink Break Recordings
             </Button>
             <Button
-                    href="/schedule.pdf"
+                    href="https://drive.google.com/file/d/1n-UvbRbv1mIZN_X6KawecGixSvNlTgo8/view?usp=sharing"
                     target="_blank">
               Schedule
             </Button>
