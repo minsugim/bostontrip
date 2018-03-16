@@ -11,6 +11,21 @@ const styles = StyleSheet.create({
     },
     text: {
         color: "#1e1e1e"
+    },
+    seconds: {
+        color: "#FFB7C5"
+    },
+    numbers: {
+        fontSize: "4em",
+        display: "inline-block",
+        color: "white",
+        marginLeft: ".1em",
+        marginRight: ".1em",
+        padding: ".5em",
+        backgroundColor: "rgba(9, 0, 155, 0.6)"
+    },
+    blocks: {
+        display: "inline-block"
     }
 });
 
@@ -49,12 +64,14 @@ class Timer extends Component {
         // let seconds = this.state.seconds === 1 ? "second" : "seconds";
         return(
             <div>
-                <div className={css(styles.count)}>
-                    <span className={css(styles.number)}>{this.state.days}</span> <span className={css(styles.text)}>days</span>
+                <div>
+                    <div className={css(styles.numbers)}>{((this.state.hours < 10) ? "0" : "") + this.state.hours}</div>
+                    <div className={css(styles.numbers)}>{((this.state.minutes < 10) ? "0" : "") + this.state.minutes}</div>
+                    <div className={css(styles.numbers, styles.seconds)}>{((this.state.seconds < 10) ? "0" : "") + this.state.seconds}</div>
                 </div>
-                <span className={css(styles.count)}>Hours:<span className={css(styles.number)}>{((this.state.hours < 10) ? "0" : "") + this.state.hours}</span></span>
+                {/* <span className={css(styles.count)}>Hours:<span className={css(styles.number)}>{((this.state.hours < 10) ? "0" : "") + this.state.hours}</span></span>
                 <span className={css(styles.count)}> Minutes:<span className={css(styles.number)}>{((this.state.minutes < 10) ? "0" : "") + this.state.minutes}</span> </span> 
-                <span className={css(styles.count)}> Seconds:<span className={css(styles.number)}>{((this.state.seconds < 10) ? "0" : "") + this.state.seconds}</span> </span>               
+                <span className={css(styles.count)}> Seconds:<span className={css(styles.number, styles.seconds)}>{((this.state.seconds < 10) ? "0" : "") + this.state.seconds}</span> </span>                */}
             </div>
         )
     }
